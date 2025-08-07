@@ -1,0 +1,369 @@
+
+.products-page {
+  width: 100%;
+  margin: 0 auto; 
+  padding: 0;
+  background: rgb(128, 225, 255);
+  min-height: 100vh;
+}
+
+
+.banner-section {
+  position: relative;
+  padding: 2rem 1rem;
+}
+
+.main-banner {
+  position: relative;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.banner-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+
+
+.banner-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.banner-nav:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.banner-nav-left {
+  left: 15px;
+}
+
+.banner-nav-right {
+  right: 15px;
+}
+
+.banner-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.banner-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.banner-dot.active {
+  background: white;
+  transform: scale(1.2);
+}
+
+.banner-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.thumbnail-item {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.thumbnail-item:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail-image {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+.search-filter-section {
+  background: white;
+  padding: 2rem 1rem;
+  border-radius: 12px 12px 0 0;
+  margin-top: -12px;
+  position: relative;
+  z-index: 5;
+}
+
+.search-container {
+  margin-bottom: 1.5rem;
+}
+
+.search-input-wrapper {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.875rem 1rem 0.875rem 2.5rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 25px;
+  font-size: 1rem;
+  background: #f9fafb;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+
+.new-merch-section {
+  background: white;
+  padding: 0 1rem 2rem 1rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0 0.5rem;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.snowflake-icon {
+  font-size: 1.5rem;
+  color: #667eea;
+}
+
+.section-title h2 {
+  color: #667eea;
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.view-all-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 2px solid #667eea;
+  color: #667eea;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.view-all-btn:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* Products Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.product-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: white;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.product-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.product-badges {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.new-badge {
+  background: #ef4444;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.digital-badge {
+  background: #8b5cf6;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* No Products when there's no product */
+.no-products {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: white;
+  border-radius: 12px;
+  margin: 2rem 1rem;
+}
+
+.no-products-title {
+  font-size: 1.5rem;
+  color: #667eea;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.no-products-subtitle {
+  color: #9ca3af;
+  font-size: 1rem;
+}
+
+/* Responsive Design for fun */
+@media (max-width: 768px) {
+  .banner-section {
+    padding: 1rem 0.5rem;
+  }
+
+  .banner-container {
+    height: 200px;
+  }
+
+  .banner-thumbnails {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .thumbnail-image {
+    height: 60px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .section-title h2 {
+    font-size: 1.5rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .search-filter-section {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .new-merch-section {
+    padding: 0 0.5rem 1.5rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-container {
+    height: 150px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-nav {
+    width: 35px;
+    height: 35px;
+  }
+
+  .banner-nav-left {
+    left: 8px;
+  }
+
+  .banner-nav-right {
+    right: 8px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
